@@ -3,7 +3,7 @@ export default function Terre(props) {
 
     return (
         <div className="container">
-            <img src={groundImage}/>
+            <img src={groundImage} alt="ground" />
         </div>  
     )
 }

@@ -11,13 +11,10 @@ export default function MainContainer(props) {
     const height = 15;
     const width = 30;
     
-    const [forest, setForest] = useState([]);
-
-    const resetForest = () => { setForest(createForest()) }
-    
+    const [forest, setForest] = useState([]);  
 
     useEffect( () => {
-        resetForest()
+        setForest(createForest())
     },[]);
     
     function createForest() {
@@ -44,7 +41,7 @@ export default function MainContainer(props) {
         loading ? <div className="loading" /> :
         <>
             <Grid forest={forest}></Grid>
-            <SettingsPanel resetFn={resetForest}></SettingsPanel>
+            <SettingsPanel resetFn={() => { setForest(createForest()) }}></SettingsPanel>
         </>
     )
 }
