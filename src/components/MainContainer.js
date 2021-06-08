@@ -28,7 +28,8 @@ export default function MainContainer(props) {
 
                 forestKeys.push({ 
                     id: j+i*width,
-                    type: random <= THREE_PERCENTAGE ? "three" : "ground"
+                    type: random <= THREE_PERCENTAGE ? "three" : "ground",
+                    currentState: "normal"
                 });
             }
         }
@@ -40,7 +41,7 @@ export default function MainContainer(props) {
     return (
         loading ? <div className="loading" /> :
         <>
-            <Grid forest={forest}></Grid>
+            <Grid forest={[forest, setForest]}></Grid>
             <SettingsPanel resetFn={() => { setForest(createForest()) }}></SettingsPanel>
         </>
     )

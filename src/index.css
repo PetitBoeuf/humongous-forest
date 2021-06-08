@@ -70,6 +70,9 @@ code {
 .tree-container img:hover{
   cursor: url("/src/fire-freepik-cur.png"), auto; 
 }
+.tree-container.fire img:hover{
+  cursor: url("/src/water-freepik-cur.png"), auto; 
+}
 
 /* Loading */
 

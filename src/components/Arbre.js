@@ -1,22 +1,14 @@
-import { useState } from "react";
 import forestImage from '../forest-smashicons.png';
 import forestFireImage from '../forest-fire-smashicons.png';
 
-export default function Arbre() {
-    
-    const [currentForestState, setFire] = useState("normal");
-    
-    function burnTree(){
-        if(currentForestState === "normal") setFire("setImage");
-        else setFire("normal");
-    }
+export default function Arbre(props) {
+    const state = props.state
     
     return (
-        // <div className= {`arbre${currentForestState === 1 ? " feu" : ""} `} >
-        <div className="container tree-container" onClick={burnTree}>
+        <div className={`container tree-container ${state}`} onClick={props.onClick}>
                 <img 
-                    src={currentForestState === "normal" ? forestImage : forestFireImage}
-                    alt={currentForestState === "normal" ? "Three" : "Three with fire"}
+                    src={state === "normal" ? forestImage : forestFireImage}
+                    alt={state === "normal" ? "Three" : "Three with fire"}
                 />
         </div>  
     )
