@@ -70,3 +70,40 @@ code {
 .tree-container img:hover{
   cursor: url("/src/fire-freepik-cur.png"), auto; 
 }
+
+/* Loading */
+
+.loading {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #63d471;
+  background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+  z-index: 999;
+  display: grid;
+place-items: center;
+}
+
+.loading:after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid;
+  border-color: white hsl(0, 0%, 100%, 10%) white hsl(0, 0%, 100%, 10%);
+  animation: rotate 1s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
