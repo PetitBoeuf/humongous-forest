@@ -8,7 +8,7 @@ export default function Arbre(props) {
         <div className={`container tree-container ${state}`} onClick={props.onClick}>
                 <img 
                     src={state === "normal" ? forestImage : forestFireImage}
-                    alt={state === "normal" ? "Three" : "Three with fire"}
+                    alt={state === "normal" ? "Tree" : "Tree with fire"}
                 />
         </div>  
     )

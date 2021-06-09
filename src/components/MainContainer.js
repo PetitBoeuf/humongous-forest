@@ -3,7 +3,7 @@ import SettingsPanel from "./SettingsPanel";
 
 import { useState, useEffect } from 'react';
 
-const THREE_PERCENTAGE = .8
+const TREE_PERCENTAGE = .8
 
 export default function MainContainer(props) {
     const [loading, setLoading] = useState(true);
@@ -28,7 +28,7 @@ export default function MainContainer(props) {
 
                 forestKeys.push({ 
                     id: j+i*width,
-                    type: random <= THREE_PERCENTAGE ? "three" : "ground",
+                    type: random <= TREE_PERCENTAGE ? "tree" : "ground",
                     currentState: "normal"
                 });
             }
