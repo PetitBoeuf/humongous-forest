@@ -6,12 +6,12 @@ export default function Grid(props) {
 
     const handleStateClick = index => {
         let previousForest = [...forest];
-        let three = {...previousForest[index]};
+        let tree = {...previousForest[index]};
 
-        if (three.currentState === "normal") three.currentState = 'fire';
-        else three.currentState = 'normal';
+        if (tree.currentState === "normal") tree.currentState = 'fire';
+        else tree.currentState = 'normal';
 
-        previousForest[index] = three;
+        previousForest[index] = tree;
         setForest(previousForest)
     }
 
